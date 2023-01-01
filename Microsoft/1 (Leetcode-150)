@@ -1,0 +1,75 @@
+  class Solution
+ {
+     public:
+         int evalRPN(vector<string> &tokens)
+         {
+             stack<int> a;
+             int n = tokens.size();
+
+             for (int i = 0; i < n; i++)
+             {
+                 if (tokens[i] != "+" && tokens[i] != "-" && tokens[i] != "*" && tokens[i] != "/")
+                 {
+                     string p=tokens[i];
+                     int m=stoi(p);
+                     a.push(m);
+                 }
+                 else
+                 {
+                     if (tokens[i] == "+")
+                     {
+
+                         long a1 =  a.top();
+                         a.pop();
+                         long a2 =  a.top();
+                         a.pop();
+
+                         long c = a1 + a2;
+
+                      
+                         a.push(c);
+                     }
+                     else if (tokens[i] == "-")
+                     {
+
+                           long a1 =  a.top();
+                         a.pop();
+                         long a2 =  a.top();
+                         a.pop();
+
+                         long c = a2 - a1;
+
+                      
+                         a.push(c);
+                     }
+                     else if (tokens[i] == "*")
+                     {
+                        long a1 =  a.top();
+                         a.pop();
+                         long a2 =  a.top();
+                         a.pop();
+
+                         long c = a1 * a2;
+
+                      
+                         a.push(c);
+                     }
+                     else
+                     {
+                        long a1 =  a.top();
+                         a.pop();
+                         long a2 =  a.top();
+                         a.pop();
+
+                         long c = a2/a1;
+
+                      
+                         a.push(c);
+                     }
+                 }
+             }
+             long ans =  a.top();
+
+             return ans;
+         }
+ };
