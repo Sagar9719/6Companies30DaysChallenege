@@ -6,6 +6,5 @@ Questions Link - https://docs.google.com/document/d/1jkVKWPcOAE2Xjt7GFLV-M8N50Hy
 
 
 
-
-![Uploading Aquamarine Pattern Social Media Day Social Media Graphic.png…]()
+ 
 
