@@ -1,4 +1,4 @@
-class Solution {
+  class Solution {
 public:
     int maxRotateFunction(vector<int>& nums) {
     
@@ -12,15 +12,14 @@ public:
         long maximum = original;
         int n = nums.size();
         
-        for(int i= n-1;i>=0;i--)
+        for(int i= 1;i<n;i++)
         {
-            original += sum -(nums[i]*n);
+            original += sum -(nums[n-i]*n);
             maximum = max(original,maximum);
         }
         return maximum;
     }   
 };
-
 
 
 
